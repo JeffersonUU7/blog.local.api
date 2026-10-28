@@ -1,6 +1,6 @@
 # blog.local — Contenedor Express + TypeScript (Clase 19 GSW)
 
-Reverse proxy con Apache: Apache (puerto 80) → blog.local (puerto 3000).
+Reverse proxy con Apache: Apache (puerto 80) → blog.local (puerto 9000 por defecto).
 
 ## Rutas
 - GET /saludo?nombre=X

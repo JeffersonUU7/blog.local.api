@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import { readJSON, writeJSON } from "./db";
+import * as os from "os";
 
 const app = express();
 app.use(express.json());
@@ -76,6 +77,26 @@ app.delete("/articulos/:id", (req, res) => {
     return res.status(404).json({ error: "Articulo no encontrado" });
   writeJSON(FILE, filtrados);
   res.status(204).send();
+});
+
+app.get("/health", (req, res) => {
+  //Simular  que si falla => devuelva Error 503
+  //https://localhost:9000/health?Simular=falla
+  if (req.query.simular) {
+    return res.status(503).json({
+      estado: "No Health",
+      nodo: os.hostname(),
+      timeStamp: new Date().toISOString(),
+      mensaje: "Simular Fail"
+    });
+  }
+
+  //Normalmente, aqui estaria la verificacion DR, Redis API externos etc
+  res.status(200).json({
+    estado: "Health",
+    nodo: os.hostname(),
+    timeStamp: new Date().toISOString()
+  });
 });
 
 // ---------- Arranque ----------

@@ -1,16 +1,23 @@
 [
   {
-    "id": 1,
-    "titulo": "Bienvenido al blog",
-    "contenido": "Este es el primer artículo de ejemplo.",
-    "autor": "Alberto",
-    "fecha": "2026-09-21T00:00:00.000Z"
-  },
-  {
     "id": 2,
     "titulo": "Apache como reverse proxy",
     "contenido": "Apache recibe la petición y la reenvía a Express.",
     "autor": "Alberto",
     "fecha": "2026-09-21T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "titulo": "Prueba",
+    "contenido": "Texto de prueba",
+    "autor": "Anónimo",
+    "fecha": "2026-09-23T05:11:38.490Z"
+  },
+  {
+    "id": 4,
+    "titulo": "Prueba",
+    "contenido": "Texto de prueba",
+    "autor": "Anónimo",
+    "fecha": "2026-09-23T05:22:16.093Z"
   }
 ]
